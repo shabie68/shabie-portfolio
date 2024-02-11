@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style> 
+		.container {
+			display: flex;
+			justify-content: center;
+		}
+
+		.max-50 {
+			width: 50%
+		}
+
+		.mg-modal {
+				background: #00000073;
+				width: 100vw;
+				height: 100vh;
+				display: none;
+				position: fixed;
+			}
+
+			.mg-modal-overlay {
+				background: white;
+				justify-content: center;
+				margin: 0 auto;
+				width: 33%;
+				padding: 14px 18px;
+				position: relative;
+				top: 10px;
+
+			}
+
+			.mg-relative {
+				position: relative;
+			}
+
+			.mg-absolute {
+				position: absolute;
+				
+			}
+
+
+			.mg-positioning {
+				right: 14px;
+				top: 10px;
+			}
+
+			.mg-input {
+				padding: 10px 0;
+				border-radius: 6px;
+				border: 1px white;
+			}
+
+			.mg-upper-case {
+				text-transform: uppercase;
+			}
+
+			.mg-red{
+				color: red;
+			}
+
+			.mg-hidden {
+				display: none;
+			}
+
+			.mg-w-33 {
+				width: 33%;
+			}
+
+			.mg-flex {
+				display: flex;
+
+			}
+			.mg-direction {
+				flex-flow: column;
+			}
+
+			.mg-right {
+				text-align: end;
+			}
+
+			.mg-none {
+				display: none;
+			}
+
+			input:invalid {
+				border: 2px solid red;
+			}
+
+			.error-field {
+				color: red;
+			}
+
+			.mg-cpp {
+				flex-flow: column;
+				justify-content: space-between;
+				padding: 20px;
+				border-radius: 20px
+			}
+
+			.mg-card-color {
+				background: #58008014;
+			}
+
+			.mg-anim {
+				animation: hide 2s;
+			}
+
+			@keyframes hide {
+				0% {
+					margin: 0px;
+				}
+
+				100% {
+					margin-left: 20px;
+				}
+			}
+
+			
+	</style>
+</head>
+<body>
+
+	<div class="mg-information">
+
+			<div>
+				<label>Title</label>
+				<input type="text" name="title">
+			</div>
+
+			<span class="mg-red mg-hidden mg-validation-error">Title length should not exceed 10 characters<span>
+			
+		</div>
+	<div class="container">
+		<div class="mg-flex mg-direction">
+						
+			<input type="text" name="name" class="">
+			<label class="label mg-absolute mg-left-position mg-name-animate">Name</label>
+		</div>
+
+
+		<div class="max-50">
+			<p>First content</p>
+			<h1>Second one</h1>
+			<div>New diviions</div>
+		</div>
+<!-- 
+		<div class="mg-information">
+
+			<div>
+				<label>Title</label>
+				<input type="text" name="title">
+			</div>
+
+			
+			
+		</div> -->
+
+		<div>
+			<p class="mg-none mg-container">
+				This is some custom text. This paragraph will be hidden by default as it uses mg-none class. It set the display to none. This class can be changed via Javascript by leveraging classList.toggle function
+			</p>
+			<button id="show-element">Show</button>
+		</div>
+
+		<div class="gift-list">
+			<div class="new-gift">
+				<div>
+					<label>Gift Name</label>
+					<input type="text" name="gift">
+				</div>
+
+				<button class="like-gifts" data-idx="1">Like</button>
+			</div>
+			
+		</div>
+
+		<button class="add-gifts">Add New Gift</button>
+	</div>
+
+
+	<div class="mg-flex mg-direction mg-w-33">
+		<label class="label">Your comment</label>
+		<textarea name="comment" rows="8"></textarea>
+		<span class="mg-right mg-dark-gray mg-comment-limit">100 characters remaining</span>
+	</div>
+
+
+	<form>
+		<label>Title</label>
+		<input type="text" minlength="5" name="title" id="title" title="Enter lower case">
+		<div class="error-field"></div>
+		
+		<button type="submit">Submit</button>
+	</form>
+
+<!-- 	<div>
+		<p class="active display-para selector" id="1">1st</p>
+		<p id="2" class="mg-none selector">2nd</p>
+		<p id="3" class="mg-none selector">3rd</p>
+		<p id="4" class="mg-none selector">4th</p>
+	</div> -->
+
+	<button id="next">Next</button>
+	<button id="prev">Prev</button>
+
+
+	<div>
+		<div class="mg-cpp mg-flex mg-card-color selector" id="1">
+			<h2>Php</h2>
+			<span><b>Experience: 3+years</b></span>
+			<p>I have learnt PHP when I was in university i.e 6th semester. First project was on Library Management System where user can add, download and remove books. This project was built using custom php. I am continously using php since 2020.</p>
+		</div>
+
+		<div class="mg-cpp mg-flex mg-card-color mg-anim selector mg-none" id="2">
+			<h2>LARAVEL</h2>
+			<span><b>Experience: 2+years</b></span>
+			
+			<p>I have started to learn LARAVEL in January 2021. After four months of learning I can build full functional websites using LARAVEL. I get my first job as a LARAVEL developer September 2021. I have worked on many features such as Routing, Middleware, Gates, Polices, Events etc.</p>
+		</div>
+
+
+		<div class="mg-cpp mg-flex mg-card-color selector mg-none" id="3">
+			<h2>JAVASCRIPT</h2>
+			<span><b>Experience: 3+years</b></span>
+			
+			<p>Learnt JAVASCRIPT in 2019. Until now I am using JAVASCRIPT for DOM manipulation, applying stylings handling api requests. I also took MDN learning Guides to sharpen my JAVASCRIPT skills.</p>
+		</div>
+
+		<div class="mg-cpp mg-flex mg-card-color selector mg-none" id="4">
+			<h2>VUEJS</h2>
+			<span><b>Experience: 2+years</b></span>
+			
+			<p>During my first job I started to work on VUEJS as well. I grasp most on the concepts under 10 days and using it for more than 2 years. Things I know about State Management, Props, Components, Axios etc</p>
+		</div>
+
+		<div class="mg-cpp mg-flex mg-card-color selector mg-none" id="5">
+			<h2>JQUERY</h2>
+			<span><b>Experience: 3+years</b></span>
+			
+			<p>I familiar myself with JQUERY in 6th semester as there are Web Engineering Subject(2020). I have JQUERY at many websites such as Bagify(see above projects). </p>
+		</div>
+
+	</div>
+
+	<script>
+		function createWebsite(requirements) {
+  
+  		  if(typeof requirements !== "object") {
+  		  	console.log("Insufficient requirements")
+  		  	return
+  		  }
+
+		  console.log("Create a website")
+		  /**		more code		**/
+		  // ...
+
+
+
+		}
+
+		createWebsite({langugae: "javascript", frameworkAllowed: false, totalPages: 5})
+		createWebsite(40)
+		
+		let id = 1;
+
+		document.getElementById('next').addEventListener('click', () => {
+
+			if(id < 5) {
+				
+				id++;
+
+				document.querySelectorAll('.selector').forEach((element) => {
+					element.classList.add('mg-none')
+				})
+
+				document.getElementById(id).classList.remove('mg-none')
+			}
+
+		})
+
+		document.getElementById('prev').addEventListener('click', () => {
+			
+			if(id > 1) {
+				id--;
+
+				document.querySelectorAll('.selector').forEach((element) => {
+					element.classList.add('mg-none')
+				})
+
+				document.getElementById(id).classList.remove('mg-none')
+			}
+			
+		})
+
+		const username = document.getElementById("title");
+		const errorField = document.querySelector(".error-field")
+
+		username.addEventListener("input", (event) => {
+		  if (username.validity.tooShort) {
+		    errorField.innerHTML = 'This field should atleast 5 characters'
+		  } else {
+		  	errorField.innerHTML = ''
+		    // username.setCustomValidity("");
+		  }
+		});
+		
+		let textarea = document.querySelector('textarea[name="comment"]');
+		let commentCharacters = 100;
+		let totalCharacters = 100;
+		let length = 0;
+
+
+		textarea.addEventListener('keyup', (event) => {
+				
+			length = event.target.value.length
+			
+			commentCharacters = totalCharacters - length;
+
+			if(commentCharacters >= 0) {
+				document.querySelector('textarea + span').innerHTML = commentCharacters + ' characters remaining';
+			}
+
+		})
+
+
+
+		// let element = document.querySelector('input[name="title"]')
+
+		// element.addEventListener('blur', () => {
+
+
+		// 	let length = element.value.length;
+
+		// 	document.querySelector('.mg-validation-error').classList.toggle('mg-hidden', length < 11)
+		// })
+
+
+		// element.addEventListener('blur', () => {
+
+
+		// 	let length = element.value.length;
+
+		// 	if(length > 10) {
+		// 		document.querySelector('.mg-validation-error').classList.remove('mg-hidden')
+		// 	}else {
+		// 		document.querySelector('.mg-validation-error').classList.add('mg-hidden')	
+		// 	}
+		// })
+
+		// let _element = document.querySelector('.mg-container');
+		// let length = 20
+
+		// document.querySelector('#show-element').addEventListener('click', () => {
+	
+		// 	// let length = _element.innerHTML.length;
+			
+		// 	// alert(length)
+		// 	//length > 20 the show it
+		// 	_element.classList.toggle('mg-none', length > 20)
+		// 	// length++
+		// })
+
+
+		// let idx = 1;
+
+		// document.querySelector('.add-gifts').addEventListener('click', () => {
+			
+		// 	idx++;
+		// 	let newGift = `
+				
+		// 			<div>
+		// 				<label>Gift Name</label>
+		// 				<input type="text" name="gift">
+		// 			</div>
+
+		// 			<button class="like-gifts" data-idx="${idx}">Like</button>
+		// 	`;
+
+		// 	let giftElement = document.createElement('div');
+
+		// 	giftElement.classList.add('new-gift')
+
+		// 	giftElement.innerHTML = newGift;
+
+		// 	document.querySelector('.gift-list').append(giftElement)
+		// })
+		
+		// document.querySelector('.gift-list').addEventListener('click', (event) => {
+
+		// 	if(event.target.classList.contains('like-gifts')) {
+		// 		alert(event.target.getAttribute('data-idx'))
+		// 	}
+		// })
+
+		function getMovieAudience() {
+
+			//can be cartoon/horror
+			let movieType = 'cartoon'
+
+			return movieType == 'cartoon' ? 'children' : 'adult'
+		}
+
+		let modal = false;
+
+		function setModalDisplay() {
+			
+			let modalElementDisplay = document.querySelector('#add-comment');
+			// if(modal) {
+			// 	modal = false
+			// }
+			// else {
+			// 	modal = true
+			// }
+			// modalElementDisplay.style.display = modal ? 'block' : 'none'
+			modalElementDisplay.classList.toggle('mg-none')
+		}
+
+		document.getElementById('mg-show-modal').addEventListener('click', setModalDisplay)
+
+	</script>
+
+
+</body>
+</html>

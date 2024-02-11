@@ -1,0 +1,737 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="css/styles.css" />
+		<title>Mignon Technology</title>
+		<style>
+			.mg-direction {
+				flex-flow: column;
+				margin: 10px 0 10px 0;
+				justify-content: center
+			}
+
+			.mg-justify-between {
+				justify-content: space-between;
+
+			}
+
+			.mg-w-50 {
+				width: 50%;
+			}
+
+			.mg-gap-8 {
+				gap: 24px;
+			}
+
+			.mg-border-b {
+				border-bottom: 1px solid lightgray;
+			}
+
+			.mg-comment {
+				padding: 10px
+			}
+
+			.mg-input {
+				padding: 10px 0;
+				background-color: lightsteelblue;
+				border-radius: 6px;
+				border: 1px white;
+			}
+
+			/**1F4AEA LinkedIn Color*/
+
+
+			.mg-btn {
+				padding: 8px;
+				border: 1px white;
+				border-radius: 10px;
+				color: darkslategray;
+				font-weight: bold;
+				
+			}
+
+			.mg-btn-success {
+				background: #008000eb;
+				color: white;
+			}
+
+			.mg-btn-danger {
+				background: #e61f1f;
+				color: white;
+				width: 15%;
+				font-weight: bold
+			}
+
+			.mg-btn-secondary {
+				background: #1111eeab;
+				color: white;
+				width: 15%;
+				font-weight: bold;
+			}
+
+			.mg-margin {
+				margin: 5px 0;
+			}
+
+			.mg-direction .label {
+				color: darkgray;
+			}
+
+			.mg-padding {
+				padding: 10px 20px;
+			}
+
+			form {
+				background: white;
+			}
+
+			.mg-heading {
+				font-size: 24px;
+				font-weight: 800;
+			}
+
+			.input-label {
+				position: absolute; 
+				top: 14px; 
+				left: 12px;
+			}
+
+			.mg-leave-focus {
+				padding: 10px; 
+				background: white; 
+				border: 1px solid slateblue
+			}
+
+			#mg-com input:focus {
+				border-color: blue;
+				outline: none;
+			}
+
+			#mg-com input:focus + label {
+				
+				background: white;
+				position: absolute;
+				top: -5px;
+				color: slateblue;
+			
+				color: blue;
+				
+			}
+
+			.mg-modal {
+				background: #00000073;
+				width: 100vw;
+				height: 100vh;
+				display: none;
+				position: fixed;
+			}
+
+			.mg-modal-overlay {
+				background: white;
+				justify-content: center;
+				margin: 0 auto;
+				width: 33%;
+				padding: 16px 18px;
+				position: relative;
+				top: 10px;
+
+			}
+
+			/*.mg-modal-overlay {
+				padding: 14px 18px;
+				position: relative;
+				top: 10px;
+			}*/
+
+			.mg-right {
+				text-align: end;
+			}
+
+			div, p {
+				font-size: 18px;
+			}
+
+			.mg-bold {
+				font-weight: 800;
+				font-size: 20px;
+			}
+
+			form {
+				margin: 0
+			}
+
+
+			.mg-relative {
+				position: relative;
+			}
+
+			.mg-absolute {
+				position: absolute;
+				
+			}
+
+
+			.mg-positioning {
+				right: 14px;
+				top: 10px;
+			}
+
+			.mg-cursor {
+				cursor: pointer;
+			}
+
+			.mg-font-20 {
+				font-size: 20px
+			}
+
+			.mg-align-items{
+				align-items: center;
+			}
+
+			.mg-animate-label {
+				background: white;
+				border: 2px solid gray;
+			}
+
+			.mg-left-position {
+				left: 40px;
+			}
+
+
+
+			input[name='name']:focus {
+				outline: none;
+				border: 2px solid blue;
+			}
+
+			input[name='name']:focus + .mg-name-animate {
+				/*top: 46px;*/
+				top: -2px;
+				color: blue;
+				background: white;
+				font-size: 12px;
+				animation: name_animation 0.5s 1
+			}
+
+			input[name='email']:focus {
+				outline: none;
+				border: 2px solid blue;
+			}
+
+			input[name='email']:focus + .mg-email-animate {
+				top: -2px;
+				color: blue;
+				background: white;
+				font-size: 12px;
+				animation: email_animation 0.5s 1
+			}
+
+			.mg-border {
+				border: 2px solid lightgray;
+				border-radius: 25px;
+				padding: 20px;
+			}
+
+			.mg-exist-position {
+				font-size: 12px;
+				top: 0;
+				background: white;
+				left: 40px;
+			}
+			.mg-name-exist {
+				top: -4px;
+				font-size: 12px;
+				left: 40px;
+				background: white;
+
+			}
+
+			.mg-bg-white {
+				background: white;
+			}
+
+			.uppercase {
+				text-transform: uppercase;
+			}
+
+			.mg-red {
+				color: red;
+			}
+
+			.mg-first-comment {
+				padding-top: 10px;
+			}
+
+			.mg-w-33{
+				width: 33%;
+			}
+
+			.mg-center {
+				text-align: center
+			}
+
+			.mg-top-35 {
+				top: -35px;
+			}
+
+			.mg-right-50 {
+				right: 50%;
+			}
+
+			.mg-mt-20 {
+				margin-top: 20px;
+			}
+
+			.mg-dark-gray {
+				color: darkgray;
+			}
+
+			.mg-mt-8 {
+				margin-top: 8px;
+			}
+			.mg-font-bold {
+				font-weight: bold;
+			}
+
+			.mg-my-18 {
+				margin: 18px 0;
+			}
+
+			.mg-cursor {
+				cursor: pointer
+			}
+
+			.mg-m-auto {
+				margin: 0 auto;
+			}
+
+			.mg-ml-auto {
+				margin-left: auto;
+			}
+
+			.mg-bg-normal {
+				background: #33e29159;
+				padding: 40px;
+				border-radius: 10px
+			}
+
+			.mg-align-center {
+				align-items: center;
+			}
+
+			.mg-border-left {
+				border-left: 1px solid;
+			}
+
+			.mg-gap-12 {
+				gap: 12px;
+			}
+
+			.mg-w-full {
+				width: 100%
+			}
+
+			.mg-bg-black {
+				background-color: #524e52;
+			}
+
+			.mg-text-white {
+				color: white;
+			}
+
+			.mg-py-20 {
+				padding: 20px 0;
+			}
+
+			.mg-comment-heading {
+				font-weight: bold;
+				font-size: 24px;
+			}
+
+			.mg-mb-20 {
+				margin-bottom: 20px
+			}
+
+			.mg-w-100vw {
+				width: 100vw;
+			}
+
+			.mg-brd-rad-10 {
+				border-radius: 10px;
+			}
+
+			
+
+
+			@keyframes name_animation{
+
+				0% {
+					top: 10px;
+				}
+
+				100% {
+					top: -2px;
+				}
+			}
+
+			@keyframes email_animation{
+				0% {
+					/*top: 114px;*/
+					top: 10px;
+				}
+
+				100% {
+					/*top: 105px;*/
+					top: -2px
+				}
+			}
+
+
+			/*animation: show 2s 1;*/
+			@keyframes show {
+				0% {
+					top: 14px;
+				}
+
+				100% {
+					top: -8px;
+				}
+			}
+		</style>
+
+		<meta charset="utf-8">
+		<meta name="author" content="Shabie Ul Hassan">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+
+	<body>
+
+		<div class="mg-modal" id="add-comment">
+
+			<div class="mg-modal-overlay mg-relative">
+
+				<div class="">
+					<form>
+						<div class="mg-flex">
+							<span class="mg-font-bold mg-font-20">Add Comment</span>
+							<span class="mg-ml-auto mg-cursor" id="mg-close-modal">x</span>	
+						</div>
+						
+						<div class="mg-flex mg-direction mg-relative">
+							<input type="text" name="name" class="mg-input mg-margin mg-animate-label">
+							<label class="label mg-absolute mg-left-position mg-name-animate mg-name-label">Name</label>	
+						</div>
+
+						<span class="mg-red mg-validate-name-error mg-none">Name field is required</span>
+
+						<div class="mg-flex mg-direction mg-relative">
+							
+							<input type="email" name="email" class="mg-input mg-margin mg-animate-label">
+							<label class="labe mg-absolute mg-email-animate mg-left-position mg-email-label">Email</label>
+						</div>
+
+						<div class="mg-flex mg-direction">
+							<label class="label">Your comment</label>
+							<textarea name="comment"></textarea>
+							<span class="mg-right mg-dark-gray mg-comment-limit">100 characters remaining</span>
+						</div>
+
+						<div class="mg-right">
+							<button type="button" id="add-btn" class="mg-btn mg-btn-success mg-cursor">Add it</button>
+						</div>
+					</form>	
+				</div>
+			</div>
+			
+		</div>
+		<div class="mg-padding">
+
+			<div class="mignon-sh mg-grid mg-border-b">
+				
+
+				<div class="mignon-hobbies">
+					<h2>My Hobbies!</h2>
+
+					<div>
+						My hobbies
+						<ul>
+							<li>Spending time in nature</li>
+							<li>Watching Movies</li>
+							<li>Play Tennis</li>
+							<li>Walking</li>
+							<li>Meditation</li>
+						</ul>
+					</div>
+				</div>	
+			</div>
+
+			<div class="mg-mt-8"></div>
+			<span ><b>NOTE:</b> To add new comment click <b>Add Comment button</b></span>
+			<div class="mg-bg-black mg-text-white mg-py-20 mg-brd-rad-10 mg-mt-20">
+				<div class="mg-m-auto mg-w-50">
+
+					<div class="mg-flex mg-align-center mg-mb-20">
+						<span class="mg-comment-heading">All Comments</span>
+						<div class="mg-ml-auto">
+							<button id="mg-add-comment" class="mg-cursor mg-btn mg-btn-success">Add Comment</button>		
+						</div>	
+					</div>
+					
+					<div class=" mg-flex mg-gap-12">
+						<div class="mg-comments-container mg-w-full">
+							<div class="mg-comments">
+								<div class="mg-first-comment" data-idx="1">
+									<div>
+										<span class="mg-font-bold">By User x</span>
+										<p>Here is some dummy comment</p>
+										<div class="mg-right">
+											<span id="mg-like-1">2</span>
+											Likes
+											<span><button class="mg-btn mg-btn-secondary mg-cursor" id="mg-like-btn" onclick="likeComment()">Like</button></span>
+										</div>
+									</div>	
+								</div>	
+								<hr>
+							</div>
+						</div>
+					</div>
+
+					<div class="mg-container">
+						
+					</div>
+
+				</div>	
+			</div>
+			
+		</div>
+
+		<script>
+
+			let commentIndex = document.querySelector('.mg-first-comment').getAttribute('data-idx');
+	
+
+			let modal = false;
+			let modalElementDisplay = document.querySelector('#add-comment');
+			let deleteElements = document.querySelectorAll('.mg-delete')
+
+			document.querySelector("#add-btn").addEventListener("click",() => {
+				let name = document.querySelector('input[name="name"]').value;
+				let email = document.querySelector('input[name="email"]').value;
+				let comment = document.querySelector('textarea[name="comment"]').value;
+
+				let container = document.createElement('div')
+				
+				document.querySelector('.mg-comments').append(container)
+				commentIndex++
+				container.outerHTML += `
+					
+
+					<div class="mg-first-comment mg-mt-20" data-idx="${commentIndex}" id="mg-com-cont-${commentIndex}">
+						<div id="mg-show-${commentIndex}">
+							<span class="mg-font-bold">By ${name}</span>
+							<p id="mg-comment-${commentIndex}">${comment}</p>
+							<div class="mg-right">
+								<span><button class="mg-btn mg-btn-secondary mg-cursor mg-edit-comment" onclick="editComment(${commentIndex})">Edit</button></span>
+								<span class="mg-delete"><button class="mg-btn mg-btn-danger mg-cursor" onclick="deleteComment(${commentIndex})" id="mg-delete-${commentIndex}">Delete</button></span>
+							</div>
+						</div>
+
+						<div class="mg-none" id="mg-edit-${commentIndex}">
+							<span class="mg-font-bold">By ${name}</span>
+							<textarea class="mg-w-full" id="mg-update-${commentIndex}">${comment}</textarea>
+							<div class="mg-right mg-mt-20" onclick="saveComment(${commentIndex})">
+								<button class="mg-btn mg-cursor">Save</button>
+							</div>
+							
+						</div>	
+					</div>
+					<hr>
+				`
+
+				document.querySelector('.mg-comment-limit').innerHTML = `100 characters remaining`
+
+				
+				container.classList.add('mg-flex')
+
+				document.querySelector('form').reset()
+				setModalDisplay()
+				// deleteComments()
+
+
+			})
+
+			document.querySelector('#mg-add-comment').addEventListener('click', () => {
+				setModalDisplay()
+			})
+
+			// document.querySelector(".mg-close")?.addEventListener('click', () => {
+			// 	setModalDisplay()
+			// })			
+
+
+			function setModalDisplay() {
+				if(modal) {
+					modal = false
+				}
+				else {
+					modal = true
+				}
+				modalElementDisplay.style.display = modal ? 'block' : 'none'
+			}
+
+			
+			document.querySelector('input[name="email"]').addEventListener('blur', () => {
+				let email = document.querySelector('input[name="email"]').value;
+				let element = document.querySelector('.mg-email-animate')
+				let label = document.querySelector('input[name="email"] + label')
+				if(email?.length > 0){
+
+					element.classList.add('mg-exist-position')
+					element.classList.remove('mg-email-animate')
+				}
+				else {
+					label.classList.add('mg-email-animate')
+					label.classList.remove('mg-exist-position')
+				}
+			})
+
+			// document.querySelector('input[name="name"]').addEventListener('blur', () => {
+			// 	let name = document.querySelector('input[name="name"]').value;
+			// 	let name_element = document.querySelector('.mg-name-animate')
+			// 	let name_label = document.querySelector('input[name="name"] + label')
+			// 	if(name?.length > 0){
+
+			// 		name_element.classList.add('mg-name-exist')
+			// 		name_element.classList.remove('mg-name-animate')
+			// 	}
+			// 	else {
+			// 		name_label.classList.add('mg-name-animate')
+			// 		name_label.classList.remove('mg-name-exist')
+			// 	}
+			// })
+
+
+
+			let nameField = document.querySelector('input[name="name"]');
+
+			nameField.addEventListener('blur', () => {
+
+				let length = event.target.value.length
+				let nameElement = document.querySelector('.mg-name-label')
+
+				// if(length > 0){
+				// 	nameElement?.classList.add('mg-name-exist')
+				// 	nameElement?.classList.remove('mg-name-animate')
+				// }
+				// else {
+				// 	nameElement?.classList.add('mg-name-animate')
+				// 	nameElement?.classList.remove('mg-name-exist')
+				// }
+
+				nameElement?.classList.toggle('mg-name-animate', length < 1)
+				nameElement?.classList.toggle('mg-name-exist', length > 0)
+			})
+
+
+			function getElements() {
+				deleteElements = document.querySelectorAll('.mg-delete');
+			}
+
+			function deleteComments( ) {
+				document.querySelectorAll('.mg-delete').forEach((elem) => {
+
+
+					elem.addEventListener('click', () => {
+						console.log("ELEMENT");
+						console.log(document.querySelectorAll('.mg-delete'))
+						alert("Element")
+						document.querySelector('.mg-new-comments').style.display = 'none'
+					})
+				})
+			}
+
+
+			document.querySelector('.mg-comments').addEventListener('click', (event) => {
+			    if (event.target.classList.contains('mg-delete')) {
+			    	alert(event.target.closest('.mg-new-comments').getAttribute('data-idx'))
+			        // Find the closest parent with class 'mg-new-comments' and hide it
+			        let commentToDelete = event.target.closest('.mg-new-comments');
+			        if (commentToDelete) {
+			            commentToDelete.style.display = 'none';
+			            // Perform any other actions related to deletion here
+			        }
+			    }
+			});
+			
+
+			// deleteComments();
+
+			let commentCharacters = 99;
+			let textarea = document.querySelector('textarea[name]');
+
+			let length = 0;
+
+
+			textarea.addEventListener('keyup', (event) => {
+			
+				
+				length = event.target.value.length
+				
+				commentCharacters = 100-length;
+
+
+				document.querySelector('textarea[name] + span').innerHTML = commentCharacters + ' characters remaining';
+			})
+
+			// let element = document.querySelector('input[name="name"]')
+
+			// const validateName = () => {
+			// 	let length = element.value.length;
+			// 	document.querySelector('.mg-validate-name-error').classList.toggle('mg-none', length > 0)
+			
+			// }
+
+			// element.addEventListener('change', validateName)
+
+			function editComment(idx) {
+
+				let toHide = `mg-show-${idx}`;
+				let toShow = `mg-edit-${idx}`;
+
+				document.getElementById(toHide).classList.add('mg-none');
+				document.getElementById(toShow).classList.remove('mg-none');
+			}
+
+			function saveComment(idx) {
+
+				let toShow = `mg-show-${idx}`
+				let toHide = `mg-edit-${idx}`
+
+				let comment = `mg-comment-${idx}`;
+				let updatedComment = document.getElementById(`mg-update-${idx}`).value;
+
+				document.getElementById(toShow).classList.remove('mg-none');
+				document.getElementById(toHide).classList.add('mg-none');
+
+				document.getElementById(comment).innerHTML = updatedComment
+			}
+
+			function deleteComment(idx) {
+
+				document.querySelector(`#mg-com-cont-${idx} + hr`).remove();
+				document.getElementById(`mg-com-cont-${idx}`).remove();
+
+				
+			}
+
+			function likeComment() {
+				let likes = Number(document.getElementById('mg-like-1').innerHTML)
+				document.getElementById('mg-like-1').innerHTML = likes+1
+				document.getElementById('mg-like-btn').disabled = true;
+				document.getElementById('mg-like-btn').innerHTML = 'Liked'
+			}
+
+			document.getElementById('mg-close-modal').addEventListener('click', setModalDisplay)
+		</script>
+	</body>
+
+</html>

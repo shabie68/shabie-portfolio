@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Title</title>
+	<style>
+		.mignon-none {
+			display: none
+		}
+
+		.mg-flex {
+			display: flex
+		}
+
+		.mg-center {
+			justify-content: center;
+		}
+
+		.mg-m-auto {
+			margin: 0 auto;
+		}
+
+		.mg-width-50 {
+			width: 50%;
+		}
+
+		.mg-relative {
+			position: relative;
+		}
+
+		.mg-absolute {
+			position: absolute;
+		}
+
+		.input-label {
+				position: absolute; top: 14px; left: 12px;
+		}
+
+		.mg-leave-focus {
+			padding: 10px; background: white; border: 1px solid slateblue
+		}
+
+		#mg-com input:focus {
+			border-color: blue;outline: none;
+		}
+
+		#mg-com input:focus + label {
+			background: white; position: absolute; top: -5px; color: slateblue; color: blue;
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<!-- <div style="display: flex; flex: 100px; ">
+		<div class="mg-cpp">
+		
+			<p>Coversion Pro Plus one of the project that I am recently worked. It is an application that surround mostly with ecommerce. It creates sense of urgency. Suppose a product x is added to a cart, this will show timer to indicate that x will be stock off soon so checkout soon.</p>
+
+			<div>
+				<a href="#">Visit application</a>
+			</div>
+		</div>
+
+		<div class="mg-cpp">
+		
+		<p>Coversion Pro Plus one of the project that I am recently worked. It is an application that surround mostly with ecommerce. It creates sense of urgency. Suppose a product x is added to a cart, this will show timer to indicate that x will be stock off soon so checkout soon.</p>
+
+		<div>
+			<a href="#">Visit application</a>
+		</div>
+	</div>
+
+
+	<div class="mg-cpp">
+		
+		<p>Coversion Pro Plus one of the project that I am recently worked. It is an application that surround mostly with ecommerce. It creates sense of urgency. Suppose a product x is added to a cart, this will show timer to indicate that x will be stock off soon so checkout soon.</p>
+
+		<div>
+			<a href="#">Visit application</a>
+		</div>
+	</div>	
+
+	<p>testing here</p>
+	</div>
+	
+
+	<div>
+	<p id="question">Can you show some ways to improve confidence</p>
+	<div class="mignon-none answer">Just follow the steps given below. 
+		<ul>
+			<li>Practcie meditation</li>
+			<li>Smile</li>
+			<li>Use Plausible Reasoning</li>
+		</ul>
+	</div> -->
+
+	<div class="mg-flex mg-center mg-width-50 mg-m-auto">
+		<div>
+			<form>
+				<div class="mg-relative">
+					<label class="label mg-absolute">Name</label>
+					<input type="text" name="name" class="mg-input mg-margin">
+				</div>
+
+				<div class="mg-relative">
+					<label class="label mg-absolute">Email</label>
+					<input type="email" name="email" class="mg-input mg-margin">
+				</div>
+
+				<div class="mg-relative">
+					<label class="label mg-absolute">Your comment</label>
+					<textarea name="comment" ></textarea>
+				</div>
+
+				<div>
+					<button type="button" id="add-btn" class="mg-btn">Add Comment</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="" id="mg-com" style="position: relative; margin-top: 30px">
+		<input type="email" name="email" class="mg-input mg-margin mg-leave-focus" style="">
+		<label class="input-label" style="">Email or Phone</label>
+	</div>
+</div>
+
+<script>
+  
+  document.getElementById('question').addEventListener('click', () => {
+		document.querySelector('.answer').classList.toggle('mignon-none')
+	})
+
+  
+</script>
+
+</body>
+
+</html>

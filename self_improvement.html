@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Self Improvement Tips</title>
+	<style>
+		#mistakes-benefits {
+
+			animation: show 3s 1;
+
+
+		}
+
+		@keyframes show {
+			0% {
+				padding: 0px
+				width: 0px
+			}
+
+
+			100% {
+				padding-top: 20px;
+			}, 
+
+		}
+
+		.mignon-none {
+			display: none;
+		}
+
+		.mignon-show {
+			display: block;
+		}
+
+
+	</style>
+</head>
+<body>
+	<div>
+		<div>
+
+			<div id="mistakes">
+				What is the benefit of accepting our mistakes?
+			</div>
+
+			<div id="mistakes-benefits" class="mignon-none">
+				First one is to accept our mistakes. If we truely care about our growth we should accept our mistakes. There is nothing worng in it. It will also shows that you have growth mindset. No one is perfect. Here are some tips that will
+			</div>
+		</div>
+
+		<div>
+			
+		</div>
+
+		<div>
+			
+		</div>
+	</div>
+
+	<script>
+		document.getElementById('mistakes').addEventListener('click', () => {
+			// document.getElementById('mistakes-benefits').style.display = 'block'
+			document.getElementById('mistakes-benefits').classList.toggle('mignon-none')
+		})
+	</script>
+</body>
+</html>
+

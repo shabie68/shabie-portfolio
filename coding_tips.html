@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Coding Tips</title>
+	<style>
+		.mignon-margin {
+			margin: 20px;
+		}
+
+		.mignon-code {
+			background: #092994bf;
+			color: white;
+			border-radius: 10px;
+			padding: 10px 30px;
+		}
+
+		.mg-fixed {
+			position: fixed;
+		}
+
+		.mg-sidebar {
+			background: #e1f93494;
+			padding: 20px;
+			height: 100vh;
+			border-radius: 10px;
+		}
+
+		ul li {
+			list-style: auto;
+			margin-bottom: 8px;
+		}
+
+		ul {
+			padding: 0 10px 0 20px
+		}
+
+		ul, li a {
+			color: #000000c2;
+		}
+
+		.mg-right-0 {
+			right: 0;
+		}
+
+		.mg-w-203 {
+			width: 210px;
+		}
+
+		#mg-coding-tips {
+			position: relative;
+			animation: sidebar 8s infinite;
+		}
+
+		pre {
+			font-family: cursive;
+		}
+
+		a {
+			text-decoration: none;
+			font-size: 18px;
+			font-weight: bold;
+		}
+
+		@keyframes sidebar {
+			0% {
+				top: 0;
+			}
+
+
+			100% {
+				top: 100%;
+			}, 
+
+		}
+
+
+	</style>
+
+	<meta charset="utf-8">
+	<meta name="author" content="Shabie Ul Hassan">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+	<div class="mg-sidebar mg-fixed">
+		<h3>Table of contents</h3>
+		<ul>
+			<li><a href="#mg-early-returns">Early returns</a></li>
+			<li><a href="#mg-ternary-operator">Ternary Operators</a></li>
+			<li><a href="#mg-three-params">Three Parameters</a></li>
+			<li><a href="#mg-optional-chaining">Optional Chaining Op</a></li>
+			<li><a href="#mg-toggle-method">Toggle method</a></li>
+			<li><a href="#mg-condition-comp">Switch vs If Else</a></li>
+			<li><a href="#mg-field-constraint">Reflect Field Constraint</a></li>
+			<li><a href="#mg-apply-styles">Apply Styles with Js</a></li>
+		</ul>	
+	</div>
+
+	<div class="mg-card mg-sidebar mg-w-210 mg-fixed mg-right-0" >
+		<span id="mg-coding-tips">
+			<h3>Coming Soon!</h3>
+			<ul>
+				<li><a href="#mg-early-returns">Web Security</a></li>
+				<li><a href="#mg-ternary-operator">Recursion vs Loop</a></li>
+				<li><a href="#mg-ternary-operator">Nullish coalsecing op(??)</a></li>
+			</ul>	
+		</span>
+	</div>
+
+	<div class="mg-flex mg-center">
+		<div class="mignon-margin mg-max-50">
+		<h1>Here are some coding tips that will help you to optimize the code efficiently. </h1>
+		<div id="mg-early-returns">
+			<h3>Using early returns</h3>
+
+			<div>
+				<p class="mg-font-system">
+					First tip is to use early return instead of using else condition. Most of the time the trick lies in using condition like !vehicles then return. If condition is false then will continue the code execution. Let's explain the below example. Function name as it suggest it will retrieve vehicles. The code simply does check if there is no vehicles in response then return as soon as possible. No need to check another condition as it will be already return.
+				</p>
+
+				<div class="mignon-code">
+
+					<code>
+						<pre>
+
+function getVehicles(response) {
+
+	if(!response.vehicles) {
+		return;
+	}
+
+	/**		more code 	**/
+}
+						</pre>
+					</code>		
+				</div>
+			</div>
+		</div>
+
+
+		<div id="mg-ternary-operator">
+			<h3>Using Ternary Operator</h3>
+
+			<div>
+				<p class="mg-font-system">
+					Ternary operators comes in handy when our code has only 1 line if conditions. I often use it for single line condition. Using it for nesting conditions get very complicated. It can also be used for returning values.
+					Let's explain the code a little bit. As the function name suggest this function check if the weather is hot or not.
+
+					We first initialize weather variable with winter and there may be more code in the between. At the end we return false if weather is winter or spring. 
+
+					<br><br><b>Syntax</b> is as follow***<code>(condition) ? 'condition is true' : 'Condition is false'</code>
+
+					<p>Compare the 2 versions and decide which one is more clean and concise. As I mentioned earlier I prefer ternary operator for single line condition</p>
+				</p>
+
+				<div class="mignon-code">
+					<code>
+						<pre>
+
+function isHot() {
+
+	let weather = 'winter';
+
+	/**		more code 	**/
+
+	return weather == 'winter || spring' ? false : true
+}
+
+function isHot() {
+
+	let weather = 'winter'
+
+	/**		more code 	**/
+
+	if(weather == 'winter' || weather == 'spring') {
+		return true;
+	}
+	else {
+		return false
+	}
+}
+						</pre>
+					</code>		
+				</div>
+			</div>
+		</div>
+
+		<div id="mg-three-params">
+			<h3>Passing no more than 3 parameters to a function</h3>
+
+			<div>
+				<p class="mg-font-system">
+					One of the best practices when working with function is to pass paramters. It is recommended that there should be no more than 3 parameters pass to a function(can pass more than that) for improve readibility. If want to improve code readibilty just pass no more than 3 parameters to a function else it will mess up.
+
+					<br>
+
+					Consider below 2 examples 
+				</p>
+
+				<div class="mignon-code">
+					<code>
+						<pre>
+
+/** 1st approach **/
+
+function buildHouse(bricks, cement, rooms, hasKitchen, hasWifi) {
+	/** build a house **/
+}
+
+/** 2nd approach **/
+
+function buildHouse(resources) {
+
+	/**
+		resources.bricks
+		resources.cement
+		resources.rooms
+		resources.hasKitchen
+		resources.hasWifi
+	**/
+}
+						</pre>
+					</code>		
+				</div>
+			</div>
+
+			<div id="mg-optional-chaining">
+				<h2>Optional Chaining Operator(?.)</h2>
+				<div>
+					<p class="mg-font-system">When accessing property of an object is null or undefined browsers crashes or stop further script execution. To avoid it. Use this operator. Other benefits includes it will not block further script execution.</p>
+
+					<div class="mignon-code">
+						<code>
+							<pre>
+function getRecords(response) {
+
+	let records = null;
+
+	if(response.status === 200) {
+		response.records
+	}
+}
+							</pre>
+						</code>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="mg-toggle-method">
+				<h2>Toggle method for constraints</h2>
+				<div>
+					<p class="mg-font-system">When changing classes based on condition it is better to use toggle method instead of using separate if else condition</p>
+
+					<div class="mignon-code">
+						<code>
+							<pre>
+function showTab(tabId) {
+	document.querySelector(`#tab-{$tabId}`).classList.toggle('active', tabId)
+}
+							</pre>
+						</code>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="mg-condition-comp">
+				<h2>Switch vs If Else</h2>
+				<div>
+					<p class="mg-font-system">We may encounter some cases where there are limited and unique number of conditions. Using if else conditions make the code messy. Instead use switch statements for such scenarios.</p>
+
+					<div class="mignon-code">
+						<code>
+							<pre>
+function carPrice(price) {
+	switch(price) {
+		case 10: 
+			alert("You can just buy a small toy car")
+		break;
+
+		case 50: 
+			alert("You can just buy a medium toy car")
+		break;
+
+		case 100: 
+			alert("You can just buy a big toy car")
+		break;
+
+		case 500: 
+			alert("You can just buy a car for children to drive")
+		break;
+
+		case 10000: 
+			alert("You can just buy a real car")
+		break;
+
+		default:
+			alert("No car is available for such price")
+	}
+}
+							</pre>
+						</code>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="mg-field-constraint">
+				<h2>Using keyup event</h2>
+				<div>
+					<p class="mg-font-system">Keyup event occurs as users types something in. This event is called every single character is pressed. Some use cases for it are: <br>1) Writing cover letter or application form used by Coursera. <br> 2) Used by LinkedIn (sending personalize invites) <br> 3) Writing tweets(used by twitter)</p>
+
+					<div class="mignon-code">
+						<code>
+							<pre>
+function getRecords(response) {
+	let lengthElement = document.querySelector('span')
+	let comment = document.querySelector('textarea')
+
+	let commentCharacters = 100;
+	let totalCharacters = 100;
+	let length = 0;
+
+
+	comment.addEventListener('keyup', (event) => {
+			
+		length = event.target.value.length
+		
+		commentCharacters = totalCharacters - length;
+
+		if(commentCharacters >= 0) {
+			document.querySelector('textarea + span').innerHTML = 
+						commentCharacters + ' characters remaining';
+		}
+
+	})
+
+}
+							</pre>
+						</code>
+					</div>
+				</div>
+			</div>
+
+
+			<div id="mg-apply-styles">
+				<h2>Apply style via JavaScript</h2>
+				<div>
+					<p class="mg-font-system">Styles can be applied via JavaScript in 2 ways. <br> 1: element.style<br> 2) First give style to class and then dynamically add these class using classList.add/remove.</p>
+
+					<div class="mignon-code">
+						<code>
+							<pre>
+
+//styles 								
+.active {
+	display: block
+}
+
+function showModal(response) {
+	document.querySelector('#modal').classList.add('active');
+}
+							</pre>
+						</code>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+	</div>
+	
+
+</body>
+</html>

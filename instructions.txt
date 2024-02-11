@@ -1,0 +1,57 @@
+Project sections***
+	My projects with despcritpion
+
+Skills sections***
+	Overview of skills'
+
+Include you hobbies as well 
+
+Such as watching movies, playing etc.
+
+Must have Connect 
+
+Include a photo of myself
+
+Some code guides
+
+Include CERTIFICATIONS AS Well
+
+Note*** There must be horizontal line after header
+
+
+
+Here is the structure of the website
+
+
+Header***
+	Logo
+	Some links
+
+Body***
+	It should be more than 1 columns
+	Include your projects as a card section
+	Include your hobby
+	Include your skills
+
+	Include animations for down 
+
+Footer***
+
+	Some social links
+	
+
+
+Animations to inspire
+
+Snow 
+Use mdn site for inspiration
+
+
+
+I recently noticed an issue with href.
+
+What was the issue
+
+
+
+<a href="https://somesite.com"></a>
